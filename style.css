@@ -1,0 +1,223 @@
+body {
+    background-color: #f7fafc;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 72px; /* altura aproximada da navbar */
+    padding-bottom: 80px; /* Espaço para o footer fixo */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fonte mais profissional */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    background: #fff;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s; /* Transição suave */
+}
+.card:hover {
+    box-shadow: 0 6px 20px rgba(32,201,151,0.15);
+}
+
+h1 {
+    color: #20c997;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.btn {
+    /* Remova as propriedades de botão flutuante/fixo para o botão de envio normal */
+    border-radius: 1px;
+    background: linear-gradient(135deg, #20c997 60%, #38d9a9 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 24px rgba(32,201,151,0.18);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+    padding: 10px 10px;
+    min-width: 120px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px; /* Espaço extra para não colar no footer */
+}
+.btn:hover {
+    background: linear-gradient(135deg, #17a589 60%, #20c997 100%);
+    box-shadow: 0 10px 32px rgba(32,201,151,0.28);
+    transform: scale(1.04) rotate(-2deg);
+    color: #fff;
+}
+
+footer {
+    /* Apenas um bloco de estilos para o footer é necessário */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #20c997;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    z-index: 100;
+}
+
+.navbar {
+    background: #20c997 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(32,201,151,0.08);
+}
+
+.navbar-logo {
+    height: 80px;
+    width: auto;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+/* Estilo para o select de busca por temas na navbar */
+form .form-select[name="tema"] {
+    min-width: 100px;
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #20c997;
+    background: #fff;
+    color: #20c997;
+    font-size: 1rem;
+    margin-right: 6px;
+    transition: border-color 0.2s;
+    height: 32px; /* altura reduzida */
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .form-select[name="tema"]:focus {
+    border-color: #17a589;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32,201,151,0.15);
+}
+
+/* Estilo para o select de número de edital na navbar */
+form .form-select[name="numero_edital"] {
+    min-width: 100px;
+    max-width: 200px;
+    border-radius: 5px;
+    border: 1px solid #20c997;
+    background: #fff;
+    color: #20c997;
+    font-size: 1rem;
+    margin-right: 6px;
+    transition: border-color 0.2s;
+    height: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .form-select[name="numero_edital"]:focus {
+    border-color: #17a589;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32,201,151,0.15);
+}
+
+/* Estilo para o select de ano de edital na navbar */
+form .form-select[name="ano_edital"] {
+    min-width: 120px;
+    max-width: 200px;
+    border-radius: 5px;
+    border: 1px solid #20c997;
+    background: #fff;
+    color: #20c997;
+    font-size: 1rem;
+    margin-right: 6px;
+    transition: border-color 0.2s;
+    height: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .form-select[name="ano_edital"]:focus {
+    border-color: #17a589;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32,201,151,0.15);
+}
+
+/* Estilo para o select de sub-tema na navbar */
+form .form-select[name="sub_tema"] {
+    min-width: 120px;
+    max-width: 220px;
+    border-radius: 5px;
+    border: 1px solid #20c997;
+    background: #fff;
+    color: #20c997;
+    font-size: 1rem;
+    margin-right: 6px;
+    transition: border-color 0.2s;
+    height: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .form-select[name="sub_tema"]:focus {
+    border-color: #17a589;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32,201,151,0.15);
+}
+
+/* Estilo para o select de quantidade de questões na navbar */
+form .form-select[name="qtd_questoes"] {
+    min-width: 90px;
+    max-width: 120px;
+    border-radius: 5px;
+    border: 1px solid #20c997;
+    background: #fff;
+    color: #20c997;
+    font-size: 1rem;
+    margin-right: 6px;
+    transition: border-color 0.2s;
+    height: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .form-select[name="qtd_questoes"]:focus {
+    border-color: #17a589;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32,201,151,0.15);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .btn {
+        right: 12px;
+        bottom: 104px; /* aumentado para garantir distância do footer em telas pequenas */
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+    footer {
+        padding: 10px 0;
+        font-size: 0.95rem;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
