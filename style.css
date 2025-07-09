@@ -88,20 +88,20 @@ footer {
     
 }
 
-/* Estilo para o select de busca por temas na navbar */
+/* Aparência mais elegante para o select de temas */
 form .form-select[name="tema"] {
-    min-width: 100px;
-    max-width: 500px;
-    border-radius: 5px;
-    border: 1px solid #20c997;
+    min-width: 160px;
+    max-width: 220px;
+    height: 32px;
     background: #fff;
     color: #20c997;
+    border: 1px solid #20c997;
+    border-radius: 5px;
     font-size: 1rem;
     margin-right: 6px;
-    transition: border-color 0.2s;
-    height: 32px; /* altura reduzida */
     padding-top: 2px;
     padding-bottom: 2px;
+    transition: border-color 0.2s;
 }
 form .form-select[name="tema"]:focus {
     border-color: #17a589;
